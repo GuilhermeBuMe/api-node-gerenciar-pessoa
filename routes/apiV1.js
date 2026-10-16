@@ -65,12 +65,12 @@ router.get('/pessoa/:id', function (req, res, next) {
   let idPessoaEnviado = req.params.id ?? '';
 
   if (idPessoaEnviado == '') {
-    return res.status(400).json({ 'message': 'Indice não passado' });
+    return res.status(400).json({ 'message': 'id não passado' });
   }
 
   idPessoaEnviado = Number.parseInt(idPessoaEnviado);
   if (!Number.isInteger(idPessoaEnviado)) {
-    return res.status(400).json({ 'message': 'Indice inválido' });
+    return res.status(400).json({ 'message': 'id inválido' });
   }
 
   let indexEncontrado = listaPessoa.findIndex((pessoa => pessoa.id == idPessoaEnviado));

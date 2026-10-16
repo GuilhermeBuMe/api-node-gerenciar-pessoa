@@ -7,6 +7,7 @@ API REST básica para gerenciamento de pessoas, com cadastro de usuários. Desen
 - [Node.js](https://nodejs.org/) 18+
 - [Express](https://expressjs.com/)
 - [sqlite3](https://www.sqlite.org/)
+- [Knex](https://knexjs.org/)
 
 ## Pré-requisitos
 
@@ -20,6 +21,47 @@ git clone https://github.com/GuilhermeBuMe/api-node-gerenciar-pessoa.git
 cd api-node-gerenciar-pessoa
 npm install
 ```
+
+## Banco de dados
+
+A v2 da API usa SQLite com [Knex](https://knexjs.org/) para gerenciar o schema por meio de migrations.
+
+- Configuração: `knexfile.js`
+- Arquivo do banco: `db/database.sqlite` (criado automaticamente, não versionado)
+- Migrations: `db/migrations/`
+- Seeds: `db/seeds/`
+
+### Preparando o banco
+
+Antes de usar os endpoints `/v2`, crie as tabelas:
+
+```bash
+npx knex migrate:latest
+```
+
+(Opcional) Popule com dados de exemplo:
+
+```bash
+npx knex seed:run
+```
+
+### Comandos úteis
+
+Para recriar o banco do zero:
+
+```bash
+npx knex migrate:rollback --all && npx knex migrate:latest && npx knex seed:run
+```
+
+### Estrutura das tabelas
+
+#### `pessoa`
+
+| Coluna | Tipo | Restrições |
+| ------ | ---- | ---------- |
+| id | integer | PK, autoincremento |
+| nome | string | obrigatório |
+| data_nascimento | date | obrigatório |
 
 ## Como executar
 
@@ -65,4 +107,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## Autor
 
-Guilherme Bueno Mendanha — [github.com/GuilhermeBuMe](https://github.com/GuilhermeBuMe)
+Guilherme B. Mendanha — [github.com/GuilhermeBuMe](https://github.com/GuilhermeBuMe)

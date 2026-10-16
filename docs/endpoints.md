@@ -36,9 +36,9 @@ Lista as pessoas cadastradas
 
 ---
 
-### GET `/v1/pessoa/:indice`
+### GET `/v1/pessoa/:id`
 
-Busca uma pessoa pelo indice.
+Busca uma pessoa pelo id.
 
 **Resposta `200 OK`**
 
@@ -191,9 +191,9 @@ Quando ocorre um erro, a API retorna o status HTTP correspondente e um JSON com 
 
 ---
 
-### GET `/v2/pessoa/:indice`
+### GET `/v2/pessoa/:id`
 
-Busca uma pessoa pelo indice.
+Busca uma pessoa pelo id.
 
 **Resposta `200 OK`**
 
