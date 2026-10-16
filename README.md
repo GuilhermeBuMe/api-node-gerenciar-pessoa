@@ -31,7 +31,9 @@ A API ficará disponível em `http://localhost:3000`.
 
 ## Endpoints
 
-### Tarefas
+Acesso a documentação de cada ENDPOINT disponivel em [ENDPOINTS](docs/endpoints.md)
+
+### Pessoa
 
 | Método | Rota                   | Descrição                     | Utiliza sqlite3 |
 |--------|------------------------|-------------------------------|-----------------|
