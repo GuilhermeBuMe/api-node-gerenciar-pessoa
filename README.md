@@ -80,10 +80,10 @@ Acesso a documentação de cada ENDPOINT disponivel em [ENDPOINTS](docs/endpoint
 | Método | Rota                   | Descrição                     | Utiliza sqlite3 |
 |--------|------------------------|-------------------------------|-----------------|
 | GET    | `/v1/pessoa/`          | Lista as pessoas registras    | Não             |
-| GET    | `/v1/pessoa/:indice`   | Busca um pessoa pelo indice   | Não             |
+| GET    | `/v1/pessoa/:id`       | Busca um pessoa pelo ID       | Não             |
 | POST   | `/v1/pessoa/`          | Cria uma nova pessoa          | Não             |
-| PUT    | `/v1/pessoa/:indice`   | Atualiza uma pessoa           | Não             |
-| DELETE | `/v1/pessoa/:indice`   | Remove uma pessoa             | Não             |
+| PUT    | `/v1/pessoa/:id`       | Atualiza uma pessoa           | Não             |
+| DELETE | `/v1/pessoa/:id`       | Remove uma pessoa             | Não             |
 | GET    | `/v2/pessoa/`          | Lista as pessoas registras    | Sim             |
 | GET    | `/v2/pessoa/:id`       | Busca um pessoa pelo ID       | Sim             |
 | POST   | `/v2/pessoa/`          | Cria uma nova pessoa          | Sim             |
