@@ -16,8 +16,8 @@ API REST básica para gerenciamento de pessoas, com cadastro de usuários. Desen
 ## Instalação
 
 ```bash
-git clone https://github.com/GuilhermeBuMe/CRUD_PESSOA.git
-cd CRUD_PESSOA
+git clone https://github.com/GuilhermeBuMe/api-node-gerenciar-pessoa.git
+cd api-node-gerenciar-pessoa
 npm install
 ```
 
